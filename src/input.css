@@ -1,3 +1,80 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.body{
+    font-family: 'Arial', 'Helvetica', 'sans-serif';
+  }
+.Navbar-fixed{
+   @apply fixed z-[9999] bg-slate-500; 
+
+}
+
+nav{
+    overflow: hidden;
+    width: 100%;
+    height: 60px;
+    background-color: blue;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    box-shadow:#243642;
+    
+}
+
+.hamburger-line {
+    width: 30px;           /* Panjang garis */
+    height: 2px;           /* Ketebalan garis */
+    background-color: #243642; /* Warna garis */
+    margin: 5px 0;         /* Jarak antar garis */
+    display: block;        /* Garis muncul sebagai blok */
+    transition: all 0.3s ease-in-out; /* Animasi transisi */
+    order: 1px solid red; /* Periksa apakah garis muncul */
+}
+
+
+
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 3s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+
+
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }  
+  /* For demonstration purposes only: */
+  h1 { font-size: 0.5em }
+
+  #hoverImage {
+    transition: transform 0.3s ease;
+    display: block;
+    margin: auto;
+}
+
+/* Gaya untuk div pembungkus */
+.foto {
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.bg-slate-200 {
+    background-color: #e2e8f0;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+}
+
+.hoverImage {
+    transition: transform 0.3s ease;
+}

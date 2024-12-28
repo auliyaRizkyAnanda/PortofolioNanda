@@ -1,4 +1,5 @@
-*, ::before, ::after {
+*, 
+::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -126,6 +127,250 @@
   /* 2 */
   border-color: #e5e7eb;
   /* 2 */
+}
+/* Navbar dasar */
+nav {
+  overflow: hidden;
+  width: 100%;
+  z-index: 9999;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  transition: box-shadow 0.3s ease-in-out; /* Transisi halus */
+}
+
+/* Bayangan saat di-scroll */
+.navbar-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow ringan */
+  background-color: rgba(255, 255, 255, 0.7); /* Warna semi-transparan */
+  backdrop-filter: blur(10px);
+}
+
+/* Gaya elemen lainnya */
+nav li {
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(78, 71, 71);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px 20px;
+  font-weight: normal;
+  transition: 0.3s;
+}
+
+nav li:hover {
+  color: #4DA1A9;
+  font-weight: bold;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slider{
+width: 100%;
+height: 200px;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+
+figure{
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+}
+
+
+.logo{
+  border-radius: 10%;/* Membuat bulat */
+  width:30px;       /* Tentukan ukuran lebar */
+  height: 30px;      /* Tentukan ukuran tinggi */
+  object-fit: cover;
+  
+}
+
+.penutup {
+  background-color: #213555; /* Warna latar belakang */
+  color: white; /* Warna teks */
+  padding: 5px 0; /* Padding atas dan bawah */
+  text-align: center; /* Teks rata tengah */
+  font-size: 10px; /* Ukuran font */
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Bayangan halus di atas */
+  position: relative; /* Posisi default */
+  width: 100%; /* Lebar penuh */
+}
+
+.penutup p {
+  margin: 0; /* Menghapus margin default */
+  font-family: Arial, sans-serif; /* Font modern */
+}
+
+@media (max-width: 768px) {
+  .penutup {
+      font-size: 8px; /* Ukuran font lebih kecil untuk perangkat kecil */
+  }
+}
+
+
+/* CSS untuk Footer */
+.footer-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff; /* Warna latar belakang */
+  margin-top: 30px;
+
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  color: #000;
+}
+
+.footer-subtitle {
+  font-size: 1rem;
+  margin-bottom: 60px;
+  color: #4a4a4a;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Jarak antar ikon */
+  margin-bottom: 30px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+  background-color: #4da1a9;
+  color: #fff;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+  .footer-title {
+      font-size: 1.25rem;
+  }
+
+  .footer-subtitle {
+      font-size: 0.9rem;
+  }
+
+  .icon {
+      font-size: 1.0rem;
+      width: 40px;
+      height: 40px;
+  }
+}
+
+/* Responsif untuk Desktop */
+@media (min-width: 768px) {
+  .footer-title {
+      font-size: 2rem;
+  }
+
+  .footer-subtitle {
+      font-size: 1.25rem;
+  }
+
+  .icon {
+      font-size: 1.8rem;
+      width: 50px;
+      height: 50px;
+  }
+}
+
+
+.slider .row{
+  display: flex;
+  gap: 50px;
+  width: calc(100px*30);
+  animation: slide 5s linear infinite;
+  padding: 5px;
+}
+
+@keyframes slide {
+  0%{
+    transform: translateX(0);
+  }
+  0%{
+    transform: translateX(calc(100px));
+  }
+}
+
+.Keahlian .h1{
+ font-size: 1px;
+ font-family: Arial, sans-serif;
+ 
+}
+
+img:hover{
+  transform: translateZ(10px);
+  transition: 0.5s;
+  border-radius: 20%;
+}
+
+.slider .column{
+  perspective: 100px;
+}
+
+h1 { font-size: 0.5em }
+
+#hoverImage {
+  transition: transform 0.3s ease;
+  display: block;
+  margin: auto;
+}
+
+/* Gaya untuk div pembungkus */
+.foto {
+  width: 100%;
+  margin-top: 2.5rem;
+}
+
+.bg-slate-200 {
+  background-color: #e2e8f0;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
+}
+#hoverImage {
+  transition: transform 0.3s ease;
+  display: block;
+  margin: auto;
+}
+.hoverImage {
+  transition: transform 0.3s ease;
+}
+
+.hamburger-line {
+  width: 30px;           /* Panjang garis */
+  height: 2px;           /* Ketebalan garis */
+  background-color: #243642; /* Warna garis */
+  margin: 5px 0;         /* Jarak antar garis */
+  display: block;        /* Garis muncul sebagai blok */
+  transition: all 0.3s ease-in-out; /* Animasi transisi */
+  order: 1px solid red; /* Periksa apakah garis muncul */
 }
 
 ::before,
@@ -593,52 +838,8 @@ video {
   margin-right: auto;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mt-40 {
-  margin-top: 10rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
-.ml-0 {
-  margin-left: 0px;
-}
-
-.ml-10 {
-  margin-left: 2.5rem;
-}
-
-.ml-20 {
-  margin-left: 5rem;
-}
-
-.ml-40 {
-  margin-left: 10rem;
-}
-
-.mr-1 {
-  margin-right: 0.25rem;
-}
-
-.mr-10 {
-  margin-right: 2.5rem;
-}
-
 .mb-10 {
   margin-bottom: 2.5rem;
-}
-
-.mb-60 {
-  margin-bottom: 15rem;
-}
-
-.mb-3 {
-  margin-bottom: 0.75rem;
 }
 
 .mb-2 {
@@ -649,8 +850,24 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .mr-3 {
   margin-right: 0.75rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
 }
 
 .block {
@@ -665,12 +882,12 @@ video {
   height: 2.25rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-9 {
   width: 2.25rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-full {
@@ -717,44 +934,9 @@ video {
   border-width: 1px;
 }
 
-.border-primary {
-  --tw-border-opacity: 1;
-  border-color: rgb(36 54 66 / var(--tw-border-opacity, 1));
-}
-
-.border-Almost {
-  --tw-border-opacity: 1;
-  border-color: rgb(246 244 240 / var(--tw-border-opacity, 1));
-}
-
-.border-gray-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity, 1));
-}
-
-.border-gray-100 {
-  --tw-border-opacity: 1;
-  border-color: rgb(243 244 246 / var(--tw-border-opacity, 1));
-}
-
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
-}
-
-.border-white {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-}
-
-.border-gray-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
-}
-
-.border-secondary {
-  --tw-border-opacity: 1;
-  border-color: rgb(77 161 169 / var(--tw-border-opacity, 1));
 }
 
 .bg-Almost {
@@ -767,11 +949,6 @@ video {
   background-color: rgb(77 161 169 / var(--tw-bg-opacity, 1));
 }
 
-.bg-slate-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity, 1));
-}
-
 .bg-slate-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity, 1));
@@ -782,23 +959,8 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-pink-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 168 212 / var(--tw-bg-opacity, 1));
-}
-
-.bg-pink-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 231 243 / var(--tw-bg-opacity, 1));
-}
-
 .fill-current {
   fill: currentColor;
-}
-
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
 }
 
 .px-10 {
@@ -806,24 +968,9 @@ video {
   padding-right: 2.5rem;
 }
 
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
 }
 
 .py-10 {
@@ -831,9 +978,9 @@ video {
   padding-bottom: 2.5rem;
 }
 
-.py-60 {
-  padding-top: 15rem;
-  padding-bottom: 15rem;
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .py-40 {
@@ -841,38 +988,24 @@ video {
   padding-bottom: 10rem;
 }
 
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.pt-36 {
-  padding-top: 9rem;
-}
-
-.pt-40 {
-  padding-top: 10rem;
-}
-
-.pt-60 {
-  padding-top: 15rem;
-}
-
-.pt-80 {
-  padding-top: 20rem;
-}
-
 .pt-10 {
   padding-top: 2.5rem;
 }
 
-.pb-32 {
-  padding-bottom: 8rem;
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-2xl {
@@ -880,9 +1013,9 @@ video {
   line-height: 2rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-base {
@@ -890,60 +1023,29 @@ video {
   line-height: 1.5rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-bold {
   font-weight: 700;
 }
 
-.font-semibold {
-  font-weight: 600;
+.font-normal {
+  font-weight: 400;
 }
 
-.font-medium {
-  font-weight: 500;
+.font-semibold {
+  font-weight: 600;
 }
 
 .uppercase {
   text-transform: uppercase;
 }
 
-.text-primary {
-  --tw-text-opacity: 1;
-  color: rgb(36 54 66 / var(--tw-text-opacity, 1));
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-slate-500 {
-  --tw-text-opacity: 1;
-  color: rgb(100 116 139 / var(--tw-text-opacity, 1));
-}
-
-.text-\[\#4DA1A9\] {
-  --tw-text-opacity: 1;
-  color: rgb(77 161 169 / var(--tw-text-opacity, 1));
-}
-
-.text-gray-200 {
-  --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity, 1));
+.leading-tight {
+  line-height: 1.25;
 }
 
 .text-gray-300 {
@@ -951,10 +1053,19 @@ video {
   color: rgb(209 213 219 / var(--tw-text-opacity, 1));
 }
 
-.shadow {
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(36 54 66 / var(--tw-text-opacity, 1));
+}
+
+.text-slate-500 {
+  --tw-text-opacity: 1;
+  color: rgb(100 116 139 / var(--tw-text-opacity, 1));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .outline {
@@ -975,9 +1086,65 @@ video {
   transition-duration: 150ms;
 }
 
-.hover\:border-secondary:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(77 161 169 / var(--tw-border-opacity, 1));
+.wave {
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 3s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
+  display: inline-block;
+  z-index: auto;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate( 0.0deg)
+  }
+
+  10% {
+    transform: rotate(14.0deg)
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
+
+  20% {
+    transform: rotate(-8.0deg)
+  }
+
+  30% {
+    transform: rotate(14.0deg)
+  }
+
+  40% {
+    transform: rotate(-4.0deg)
+  }
+
+  50% {
+    transform: rotate(10.0deg)
+  }
+
+  60% {
+    transform: rotate( 0.0deg)
+  }
+
+  /* Reset for the last half to pause */
+
+  100% {
+    transform: rotate( 0.0deg)
+  }
+}
+
+/* For demonstration purposes only: */
+
+body {
+  font-size: 3.5em
+}
+
+h1 {
+  font-size: 0.5em
 }
 
 .hover\:bg-Almost:hover {
@@ -1023,20 +1190,8 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:ml-10 {
-    margin-left: 2.5rem;
-  }
-
-  .lg\:ml-5 {
-    margin-left: 1.25rem;
-  }
-
-  .lg\:ml-1 {
-    margin-left: 0.25rem;
-  }
-
-  .lg\:ml-40 {
-    margin-left: 10rem;
+  .lg\:ml-20 {
+    margin-left: 5rem;
   }
 
   .lg\:ml-60 {
@@ -1047,44 +1202,13 @@ video {
     width: 50%;
   }
 
-  .lg\:w-1 {
-    width: 0.25rem;
-  }
-
-  .lg\:w-10\/12 {
-    width: 83.333333%;
-  }
-
-  .lg\:w-1\/4 {
-    width: 25%;
-  }
-
-  .lg\:pt-10 {
-    padding-top: 2.5rem;
-  }
-
-  .lg\:pt-8 {
-    padding-top: 2rem;
-  }
-
-  .lg\:pt-6 {
-    padding-top: 1.5rem;
-  }
-
-  .lg\:pt-5 {
-    padding-top: 1.25rem;
-  }
-
-  .lg\:pt-4 {
-    padding-top: 1rem;
-  }
-
-  .lg\:pt-3 {
-    padding-top: 0.75rem;
-  }
-
   .lg\:pt-2 {
     padding-top: 0.5rem;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .lg\:text-5xl {
@@ -1092,10 +1216,9 @@ video {
     line-height: 1;
   }
 
-
-
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
+
